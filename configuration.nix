@@ -95,6 +95,9 @@
       spotify
       zoom-us
       inkscape
+
+      # Gnome extentions
+      gnomeExtensions.bing-wallpaper-changer
       #  thunderbird
     ];
     shell = pkgs.bash;
