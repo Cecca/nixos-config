@@ -94,6 +94,7 @@
       musescore
       spotify
       zoom-us
+      inkscape
       #  thunderbird
     ];
     shell = pkgs.bash;
