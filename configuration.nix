@@ -96,6 +96,8 @@
       zoom-us
       inkscape
 
+      gh
+
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
       gnomeExtensions.tray-icons-reloaded
