@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -91,7 +92,7 @@
       audacity
       frescobaldi
       musescore
-    #  thunderbird
+      #  thunderbird
     ];
     shell = pkgs.bash;
   };
@@ -123,6 +124,8 @@
     eza
     lazygit
     bottom
+
+    alejandra
 
     # languages
     rustup
