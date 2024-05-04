@@ -140,6 +140,7 @@
 
   programs.bash = {
     undistractMe.enable = true;
+    undistractMe.timeout = 300;
   };
 
   programs.neovim = {
