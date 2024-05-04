@@ -98,7 +98,7 @@
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
-      #  thunderbird
+      gnomeExtensions.tray-icons-reloaded
     ];
     shell = pkgs.bash;
   };
