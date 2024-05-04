@@ -126,6 +126,7 @@
     bottom
 
     alejandra
+    libnotify
 
     # languages
     rustup
@@ -136,6 +137,10 @@
     texlive.combined.scheme-full
   ];
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
   programs.starship.enable = true;
   programs.git.enable = true;
   programs.fish.enable = true;
