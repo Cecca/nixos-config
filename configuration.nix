@@ -92,6 +92,7 @@
       audacity
       frescobaldi
       musescore
+      spotify
       #  thunderbird
     ];
     shell = pkgs.bash;
