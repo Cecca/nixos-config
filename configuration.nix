@@ -93,6 +93,7 @@
       frescobaldi
       musescore
       spotify
+      zoom-us
       #  thunderbird
     ];
     shell = pkgs.bash;
@@ -109,7 +110,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # System
     fira-code
+    hplip
 
     # Tools
     gnumake
@@ -120,7 +123,6 @@
     wget
     wezterm
     obsidian
-    zoom-us
     zoxide
     eza
     lazygit
