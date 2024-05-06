@@ -133,6 +133,7 @@
     eza
     lazygit
     bottom
+    bat
 
     alejandra
     libnotify
