@@ -102,7 +102,6 @@
       gnomeExtensions.bing-wallpaper-changer
       gnomeExtensions.tray-icons-reloaded
     ];
-    shell = pkgs.bash;
   };
 
   # Allow unfree packages
