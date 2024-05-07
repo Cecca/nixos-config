@@ -95,6 +95,7 @@
       spotify
       pkgs-unstable.zoom-us
       inkscape
+      gnome.gnome-tweaks
 
       gh
 
