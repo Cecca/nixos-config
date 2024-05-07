@@ -133,6 +133,7 @@
     lazygit
     bottom
     bat
+    nushell
 
     alejandra
     libnotify
