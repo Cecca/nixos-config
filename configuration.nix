@@ -97,7 +97,9 @@
       inkscape
       gnome.gnome-tweaks
 
+      # command line utils
       gh
+      atuin
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
