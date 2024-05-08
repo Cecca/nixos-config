@@ -129,7 +129,7 @@
     vim
     neovim
     wget
-    wezterm
+    pkgs-unstable.wezterm
     obsidian
     zoxide
     eza
