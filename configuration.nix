@@ -137,6 +137,7 @@
     bottom
     bat
     nushell
+    starship
 
     alejandra
     libnotify
