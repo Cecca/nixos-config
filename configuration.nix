@@ -151,6 +151,7 @@
   ];
 
   programs.bash = {
+    blesh.enable = true;
     undistractMe.enable = true;
     undistractMe.timeout = 300;
   };
