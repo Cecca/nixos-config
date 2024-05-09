@@ -99,7 +99,6 @@
 
       # command line utils
       gh
-      atuin
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
@@ -141,6 +140,7 @@
 
     alejandra
     libnotify
+    watchexec
 
     # languages
     rustup
