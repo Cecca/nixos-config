@@ -141,6 +141,7 @@
     alejandra
     libnotify
     watchexec
+    ripgrep
 
     # languages
     rustup
