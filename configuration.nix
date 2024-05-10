@@ -177,6 +177,7 @@
   programs.direnv.enable = true;
   programs.steam.enable = true;
 
+  # Backup services
   systemd.user.services.backup = {
     enable = true;
     wantedBy = [ "default.target" ];
@@ -189,6 +190,16 @@
       Type = "oneshot";
       ExecStart = ''/usr/local/bin/timemachine /home/matteo/ /var/run/media/matteo/matteo-backup/backup -- --exclude-from=%h/.config/linux-timemachine/exclude.txt'';
 
+    };
+  };
+  systemd.user.timers.backup = {
+    enable = true;
+    wantedBy = [ "timers.target" ];
+    description = "Run the backup every hour";
+    timerConfig = {
+      OnBootSec = "15min";
+      OnCalendar = "hourly";
+      Persisten = "true";
     };
   };
 
