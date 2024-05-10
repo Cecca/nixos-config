@@ -177,6 +177,22 @@
   programs.direnv.enable = true;
   programs.steam.enable = true;
 
+  systemd.user.services.backup = {
+    enable = true;
+    wantedBy = [ "default.target" ];
+    description = "Backup the home directory using linux-timemachine";
+    unitConfig = {
+      ConditionPathIsDirectory = "/var/run/media/matteo/matteo-backup/backup";
+    };
+    serviceConfig = {
+      WorkinDirectory = "%h";
+      Type = "oneshot";
+      ExecStart = ''/usr/local/bin/timemachine /home/matteo/ /var/run/media/matteo/matteo-backup/backup -- --exclude-from=%h/.config/linux-timemachine/exclude.txt'';
+
+    };
+  };
+
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
