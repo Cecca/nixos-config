@@ -96,7 +96,7 @@
       pkgs-unstable.zoom-us
       inkscape
       gnome.gnome-tweaks
-      tor
+      tor-browser
 
       # command line utils
       gh
