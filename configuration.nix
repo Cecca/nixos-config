@@ -97,6 +97,7 @@
       inkscape
       gnome.gnome-tweaks
       tor-browser
+      youtube-dl
 
       # command line utils
       gh
