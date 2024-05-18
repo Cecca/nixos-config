@@ -152,7 +152,7 @@
     quarto
     nodejs
     texlive.combined.scheme-full
-    mold # faster linker
+    pkgs-unstable.mold # faster linker
   ];
 
   programs.bash = {
