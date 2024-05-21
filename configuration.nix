@@ -156,6 +156,7 @@
     nodejs
     texlive.combined.scheme-full
     pkgs-unstable.mold # faster linker
+    nodejs_21
   ];
 
   programs.bash = {
