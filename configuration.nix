@@ -139,6 +139,7 @@
     bat
     nushell
     starship
+    fd
 
     alejandra
     libnotify
