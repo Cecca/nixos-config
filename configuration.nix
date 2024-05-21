@@ -158,6 +158,7 @@
     pkgs-unstable.mold # faster linker
     nodejs_21
     jdk
+    python3
   ];
 
   programs.bash = {
