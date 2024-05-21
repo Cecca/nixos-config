@@ -141,6 +141,7 @@
     starship
     fd
     imagemagick
+    ghostscript
 
     alejandra
     libnotify
