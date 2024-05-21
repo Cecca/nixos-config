@@ -98,6 +98,7 @@
       gnome.gnome-tweaks
       tor-browser
       youtube-dl
+      transmission
 
       # command line utils
       gh
