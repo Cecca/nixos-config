@@ -98,7 +98,7 @@
       gnome.gnome-tweaks
       tor-browser
       youtube-dl
-      transmission
+      transmission-gtk
 
       # command line utils
       gh
