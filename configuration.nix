@@ -140,6 +140,7 @@
     nushell
     starship
     fd
+    imagemagick
 
     alejandra
     libnotify
