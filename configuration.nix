@@ -99,6 +99,7 @@
       tor-browser
       youtube-dl
       transmission-gtk
+      neovide
 
       # command line utils
       gh
