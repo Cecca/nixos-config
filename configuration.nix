@@ -143,6 +143,7 @@
     fd
     imagemagick
     ghostscript
+    pdftk
 
     alejandra
     libnotify
