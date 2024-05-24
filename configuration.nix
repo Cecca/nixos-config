@@ -145,7 +145,7 @@
     imagemagick
     ghostscript
     pdftk
-    sqlite
+    pkgs-unstable.sqlite
 
     alejandra
     libnotify
