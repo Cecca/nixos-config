@@ -185,6 +185,14 @@
     defaultEditor = true;
   };
 
+  programs.command-not-found.enable = false;
+  programs.nix-index = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+  };
+
+
   programs.starship.enable = true;
   programs.git.enable = true;
   programs.fish.enable = true;
