@@ -146,6 +146,7 @@
     ghostscript
     pdftk
     pkgs-unstable.sqlite
+    linuxPackages_latest.perf
 
     alejandra
     libnotify
