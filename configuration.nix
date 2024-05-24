@@ -145,6 +145,7 @@
     imagemagick
     ghostscript
     pdftk
+    sqlite
 
     alejandra
     libnotify
