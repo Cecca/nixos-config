@@ -99,7 +99,7 @@
       tor-browser
       youtube-dl
       transmission-gtk
-      neovide
+      kdenlive
 
       # command line utils
       gh
