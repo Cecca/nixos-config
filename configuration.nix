@@ -131,6 +131,7 @@
     just
     vim
     neovim
+    helix
     wget
     pkgs-unstable.wezterm
     obsidian
