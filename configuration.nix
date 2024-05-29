@@ -100,6 +100,7 @@
       youtube-dl
       transmission-gtk
       kdenlive
+      pkgs-unstable.zed-editor
 
       # command line utils
       gh
