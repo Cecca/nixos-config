@@ -105,6 +105,7 @@
 
       # command line utils
       gh
+      jupyter
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
