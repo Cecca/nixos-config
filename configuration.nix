@@ -101,6 +101,7 @@
       transmission-gtk
       kdenlive
       pkgs-unstable.zed-editor
+      pkgs-unstable.duckdb
 
       # command line utils
       gh
