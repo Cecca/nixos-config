@@ -103,6 +103,8 @@
       pkgs-unstable.zed-editor
       pkgs-unstable.duckdb
       qbittorrent
+      zip
+      unzip
 
       # command line utils
       gh
