@@ -102,6 +102,7 @@
       kdenlive
       pkgs-unstable.zed-editor
       pkgs-unstable.duckdb
+      qbittorrent
 
       # command line utils
       gh
