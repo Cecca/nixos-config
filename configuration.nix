@@ -113,15 +113,6 @@
     ];
   };
 
-  #nixpkgs.overlays = [
-  # (final: prev: {
-  #     sqlite = prev.sqlite.override
-  #       {
-  #         interactive = true;
-  #       };
-  #   })
-  # ];
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
