@@ -154,6 +154,7 @@
     pdftk
     sqlite
     linuxPackages_latest.perf
+    coz # causal profiling
 
     alejandra
     libnotify
