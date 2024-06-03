@@ -152,7 +152,7 @@
     imagemagick
     ghostscript
     pdftk
-    sqlite
+    sqlite-interactive
     linuxPackages_latest.perf
     coz # causal profiling
 
