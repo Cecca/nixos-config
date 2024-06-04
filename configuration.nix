@@ -155,6 +155,7 @@
     sqlite-interactive
     linuxPackages_latest.perf
     coz # causal profiling
+    fzf
 
     alejandra
     libnotify
