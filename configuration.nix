@@ -164,7 +164,7 @@
     ripgrep
 
     # languages
-    deno
+    pkgs-unstable.deno
     rustup
     rust-analyzer
     micromamba
