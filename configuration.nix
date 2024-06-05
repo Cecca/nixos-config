@@ -156,6 +156,7 @@
     linuxPackages_latest.perf
     coz # causal profiling
     fzf
+    tree-sitter
 
     alejandra
     libnotify
