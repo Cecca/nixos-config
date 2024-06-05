@@ -164,6 +164,7 @@
     ripgrep
 
     # languages
+    deno
     rustup
     rust-analyzer
     micromamba
