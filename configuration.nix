@@ -204,6 +204,7 @@
     enableFishIntegration = true;
   };
 
+  programs.hyprland.enable = true;
 
   programs.starship.enable = true;
   programs.git.enable = true;
