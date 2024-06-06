@@ -162,6 +162,7 @@
     libnotify
     watchexec
     ripgrep
+    tldr
 
     # languages
     pkgs-unstable.deno
