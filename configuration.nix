@@ -157,6 +157,7 @@
     coz # causal profiling
     fzf
     tree-sitter
+    uxplay # for sharing from the ipad
 
     alejandra
     libnotify
