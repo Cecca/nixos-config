@@ -164,6 +164,7 @@
     watchexec
     ripgrep
     tldr
+    ruff
 
     # languages
     pkgs-unstable.deno
