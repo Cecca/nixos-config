@@ -169,6 +169,7 @@
     texlab
 
     # languages
+    cmake
     pkgs-unstable.deno
     rustup
     rust-analyzer
