@@ -166,6 +166,7 @@
     ripgrep
     tldr
     ruff
+    texlab
 
     # languages
     pkgs-unstable.deno
