@@ -170,6 +170,7 @@
 
     # languages
     cmake
+    cmakeCurses
     clang
     pkgs-unstable.deno
     rustup
