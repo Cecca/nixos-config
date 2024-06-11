@@ -140,6 +140,7 @@
     helix
     wget
     pkgs-unstable.wezterm
+    pkgs-unstable.kitty
     obsidian
     zoxide
     eza
