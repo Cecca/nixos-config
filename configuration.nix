@@ -170,6 +170,7 @@
 
     # languages
     cmake
+    clang
     pkgs-unstable.deno
     rustup
     rust-analyzer
