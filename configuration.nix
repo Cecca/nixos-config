@@ -159,6 +159,7 @@
     fzf
     tree-sitter
     uxplay # for sharing from the ipad
+    xclip
 
     alejandra
     libnotify
