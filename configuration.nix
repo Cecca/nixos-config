@@ -168,6 +168,7 @@
     tldr
     ruff
     texlab
+    stylua
 
     # languages
     cmake
