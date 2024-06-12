@@ -171,6 +171,7 @@
     stylua
     lua-language-server
     ruff-lsp
+    pyright
 
     # languages
     cmake
