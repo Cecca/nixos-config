@@ -170,6 +170,7 @@
     texlab
     stylua
     lua-language-server
+    ruff-lsp
 
     # languages
     cmake
