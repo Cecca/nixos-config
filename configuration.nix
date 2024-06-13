@@ -160,6 +160,7 @@
     tree-sitter
     uxplay # for sharing from the ipad
     wl-clipboard
+    pkgs-unstable.backgroundremover
 
     alejandra
     libnotify
