@@ -182,7 +182,7 @@
     rustup
     rust-analyzer
     micromamba
-    pkgs-unstable.quarto
+    quarto
     nodejs
     texlive.combined.scheme-full
     pkgs-unstable.mold # faster linker
