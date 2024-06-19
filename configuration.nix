@@ -105,6 +105,7 @@
       qbittorrent
       zip
       unzip
+      dropbox
 
       # command line utils
       gh
