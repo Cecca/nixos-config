@@ -106,6 +106,7 @@
       zip
       unzip
       dropbox
+      dropbox-cli
 
       # command line utils
       gh
