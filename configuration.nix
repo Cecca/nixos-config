@@ -106,6 +106,7 @@
       zip
       unzip
       yazi
+      hexyl
       #pkgs-unstable.dropbox
 
       # command line utils
