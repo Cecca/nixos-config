@@ -105,8 +105,7 @@
       qbittorrent
       zip
       unzip
-      dropbox
-      dropbox-cli
+      pkgs-unstable.dropbox
 
       # command line utils
       gh
