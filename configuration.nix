@@ -105,6 +105,7 @@
       qbittorrent
       zip
       unzip
+      yazi
       #pkgs-unstable.dropbox
 
       # command line utils
