@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs,  ... }:
 
 {
   imports =
@@ -54,8 +54,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -93,21 +93,21 @@
       frescobaldi
       musescore
       spotify
-      pkgs-unstable.zoom-us
+      zoom-us
       inkscape
       gnome.gnome-tweaks
       tor-browser
       youtube-dl
       transmission-gtk
       kdenlive
-      pkgs-unstable.zed-editor
-      pkgs-unstable.duckdb
+      zed-editor
+      duckdb
       qbittorrent
       zip
       unzip
       yazi
       hexyl
-      #pkgs-unstable.dropbox
+      #dropbox
 
       # command line utils
       gh
@@ -142,8 +142,8 @@
     neovim
     helix
     wget
-    pkgs-unstable.wezterm
-    pkgs-unstable.kitty
+    wezterm
+    kitty
     obsidian
     zoxide
     eza
@@ -163,7 +163,7 @@
     tree-sitter
     uxplay # for sharing from the ipad
     wl-clipboard
-    pkgs-unstable.backgroundremover
+    backgroundremover
 
     alejandra
     libnotify
@@ -181,15 +181,14 @@
     cmake
     cmakeCurses
     clang
-    pkgs-unstable.deno
+    deno
     rustup
     rust-analyzer
     micromamba
     quarto
     nodejs
     texlive.combined.scheme-full
-    pkgs-unstable.mold # faster linker
-    nodejs_21
+    mold # faster linker
     jdk
     python3
   ];
