@@ -108,6 +108,7 @@
       yazi
       hexyl
       #dropbox
+      jetbrains-mono
 
       # command line utils
       gh
