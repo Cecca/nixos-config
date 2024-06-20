@@ -109,6 +109,8 @@
       hexyl
       #dropbox
       jetbrains-mono
+      fira-code
+      fira-code-symbols
 
       # command line utils
       gh
