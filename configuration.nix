@@ -112,6 +112,7 @@
       fira-code
       fira-code-symbols
       fira-code-nerdfont
+      nerdfonts
 
       # command line utils
       gh
