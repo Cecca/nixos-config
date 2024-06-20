@@ -111,6 +111,7 @@
       jetbrains-mono
       fira-code
       fira-code-symbols
+      fira-code-nerdfont
 
       # command line utils
       gh
