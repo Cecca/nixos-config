@@ -198,6 +198,8 @@
     python3
   ];
 
+  fonts.packages = with pkgs; [ nerdfonts ];
+
   programs.bash = {
     blesh.enable = false;
     undistractMe.enable = false;
