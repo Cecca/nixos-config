@@ -113,6 +113,7 @@
       fira-code-symbols
       fira-code-nerdfont
       nerdfonts
+      timidity
 
       # command line utils
       gh
