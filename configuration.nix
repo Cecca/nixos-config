@@ -170,6 +170,7 @@
     uxplay # for sharing from the ipad
     wl-clipboard
     backgroundremover
+    hdf5
 
     alejandra
     libnotify
