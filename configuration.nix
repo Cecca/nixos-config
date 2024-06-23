@@ -171,6 +171,7 @@
     wl-clipboard
     backgroundremover
     hdf5
+    pkg-config
 
     alejandra
     libnotify
