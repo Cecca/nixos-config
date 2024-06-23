@@ -114,6 +114,7 @@
       fira-code-nerdfont
       nerdfonts
       timidity
+      stellarium
 
       # command line utils
       gh
