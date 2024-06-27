@@ -116,6 +116,7 @@
       timidity
       stellarium
       xdg-desktop-portal
+      xdg-desktop-portal-gnome
 
       # command line utils
       gh
