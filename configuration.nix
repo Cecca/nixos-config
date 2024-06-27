@@ -115,6 +115,7 @@
       nerdfonts
       timidity
       stellarium
+      xdg-desktop-portal
 
       # command line utils
       gh
