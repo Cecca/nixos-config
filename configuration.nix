@@ -107,7 +107,6 @@
       unzip
       yazi
       hexyl
-      dropbox
       jetbrains-mono
       fira-code
       fira-code-symbols
