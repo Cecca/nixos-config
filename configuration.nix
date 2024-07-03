@@ -108,6 +108,7 @@
       yazi
       hexyl
       jetbrains-mono
+      poppler_utils
       fira-code
       fira-code-symbols
       fira-code-nerdfont
