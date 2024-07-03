@@ -109,6 +109,7 @@
       hexyl
       jetbrains-mono
       poppler_utils
+      pandoc
       fira-code
       fira-code-symbols
       fira-code-nerdfont
