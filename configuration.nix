@@ -62,7 +62,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -90,17 +90,15 @@
       firefox
       darktable
       audacity
-      frescobaldi
+      # frescobaldi
       musescore
       spotify
       zoom-us
       inkscape
-      gnome.gnome-tweaks
+      gnome-tweaks
       tor-browser
-      youtube-dl
-      transmission-gtk
+      transmission_4-gtk
       kdenlive
-      zed-editor
       duckdb
       qbittorrent
       zip
@@ -135,6 +133,7 @@
   # Whitelist some unsecure packages
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
+    "python3.12-youtube-dl-2021.12.17"
   ];
 
   # List packages installed in system profile. To search, run:
@@ -202,7 +201,7 @@
     texlive.combined.scheme-full
     mold # faster linker
     jdk
-    python3
+    python311
   ];
 
   fonts.packages = with pkgs; [ nerdfonts ];
