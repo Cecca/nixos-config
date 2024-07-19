@@ -90,6 +90,7 @@
       firefox
       darktable
       audacity
+      dropbox
       # frescobaldi
       musescore
       spotify
@@ -281,8 +282,10 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall = {
+    allowedTCPPorts = [ 17500 ];
+    allowedUDPPorts = [ 17500 ];
+  };
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
