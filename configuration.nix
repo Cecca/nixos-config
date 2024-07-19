@@ -124,7 +124,8 @@
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
-      gnomeExtensions.tray-icons-reloaded
+      gnomeExtensions.appindicator
+      # gnomeExtensions.tray-icons-reloaded
     ];
   };
 
