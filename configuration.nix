@@ -90,7 +90,7 @@
       firefox
       darktable
       audacity
-      dropbox
+      dropbox-cli
       # frescobaldi
       musescore
       spotify
