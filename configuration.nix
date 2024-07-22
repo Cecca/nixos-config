@@ -92,6 +92,7 @@
       audacity
       dropbox-cli
       # frescobaldi
+      lilypond
       musescore
       spotify
       zed-editor
