@@ -123,6 +123,7 @@
       # command line utils
       gh
       jupyter
+      ags # widgets
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
