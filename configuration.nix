@@ -116,7 +116,7 @@
       fira-code-nerdfont
       nerdfonts
       timidity
-      stellarium
+      calibre
       xdg-desktop-portal
       xdg-desktop-portal-gnome
 
