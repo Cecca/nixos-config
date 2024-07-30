@@ -147,6 +147,7 @@
     # System
     fira-code
     hplip
+    sshpass
 
     # Tools
     gnumake
