@@ -119,6 +119,7 @@
       calibre
       xdg-desktop-portal
       xdg-desktop-portal-gnome
+      github-desktop
 
       # command line utils
       gh
