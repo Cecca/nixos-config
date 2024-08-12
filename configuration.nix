@@ -123,6 +123,7 @@
 
       # command line utils
       gh
+      conda
       jupyter
       ags # widgets
 
