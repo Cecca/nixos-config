@@ -120,6 +120,7 @@
       xdg-desktop-portal
       xdg-desktop-portal-gnome
       github-desktop
+      mpv
 
       # command line utils
       gh
