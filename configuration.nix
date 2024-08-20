@@ -121,6 +121,7 @@
       xdg-desktop-portal-gnome
       github-desktop
       mpv
+      google-chrome
 
       # command line utils
       gh
