@@ -122,6 +122,7 @@
       github-desktop
       mpv
       google-chrome
+      libreoffice
 
       # command line utils
       gh
