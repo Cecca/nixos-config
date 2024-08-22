@@ -85,7 +85,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       darktable
@@ -124,7 +124,6 @@
       google-chrome
       libreoffice
       xournal
-      docker
 
       # command line utils
       gh
@@ -216,6 +215,14 @@
     jdk
     python311
   ];
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   fonts.packages = with pkgs; [ nerdfonts ];
 
