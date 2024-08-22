@@ -124,6 +124,7 @@
       google-chrome
       libreoffice
       xournal
+      podman
 
       # command line utils
       gh
