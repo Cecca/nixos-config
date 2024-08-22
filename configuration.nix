@@ -127,6 +127,7 @@
 
       # command line utils
       gh
+      dust
       conda
       jupyter
       ags # widgets
