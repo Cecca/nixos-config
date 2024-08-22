@@ -123,6 +123,7 @@
       mpv
       google-chrome
       libreoffice
+      xournal
 
       # command line utils
       gh
