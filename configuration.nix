@@ -204,6 +204,7 @@
     pyright
 
     # languages
+    pipx
     cmake
     cmakeCurses
     clang
