@@ -124,6 +124,7 @@
       google-chrome
       libreoffice
       xournal
+      thonny
 
       # command line utils
       gh
