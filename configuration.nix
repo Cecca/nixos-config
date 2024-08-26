@@ -189,6 +189,7 @@
     backgroundremover
     hdf5
     pkg-config
+    poetry
 
     alejandra
     libnotify
