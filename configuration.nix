@@ -125,6 +125,7 @@
       libreoffice
       xournal
       thonny
+      vscode-fhs
 
       # command line utils
       gh
