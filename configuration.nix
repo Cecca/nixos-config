@@ -204,6 +204,7 @@
     pyright
 
     # languages
+    typst
     pipx
     cmake
     cmakeCurses
