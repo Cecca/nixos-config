@@ -126,6 +126,7 @@
       xournal
       thonny
       vscode-fhs
+      slack-term
 
       # command line utils
       gh
