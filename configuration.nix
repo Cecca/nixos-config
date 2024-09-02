@@ -127,6 +127,7 @@
       thonny
       vscode-fhs
       slack
+      intel-gpu-tools
 
       # command line utils
       gh
