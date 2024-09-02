@@ -205,6 +205,7 @@
     lua-language-server
     ruff-lsp
     pyright
+    rust-analyzer
 
     # languages
     typst
