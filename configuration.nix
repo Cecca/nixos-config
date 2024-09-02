@@ -222,6 +222,7 @@
     mold # faster linker
     jdk
     python311
+    python311Packages.pip
   ] ++ 
   # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
   [(let base = pkgs.appimageTools.defaultFhsEnvArgs; in
