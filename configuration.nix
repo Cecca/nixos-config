@@ -128,6 +128,7 @@
       vscode-fhs
       slack
       intel-gpu-tools
+      stellarium
 
       # command line utils
       gh
