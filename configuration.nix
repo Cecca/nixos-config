@@ -129,7 +129,6 @@
       slack
       intel-gpu-tools
       stellarium
-      paperless-ngx
 
       # command line utils
       gh
@@ -305,6 +304,11 @@
       OnCalendar = "hourly";
       Persisten = "true";
     };
+  };
+
+  # Paperless service
+  services.paperless = {
+    enable = true;
   };
 
   # Dropbox service
