@@ -129,6 +129,7 @@
       slack
       intel-gpu-tools
       stellarium
+      paperless-ngx
 
       # command line utils
       gh
