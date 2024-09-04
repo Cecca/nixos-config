@@ -306,11 +306,6 @@
     };
   };
 
-  # Paperless service
-  services.paperless = {
-    enable = true;
-  };
-
   # Dropbox service
   systemd.user.services.dropbox = {
     description = "Dropbox";
