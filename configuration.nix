@@ -136,6 +136,7 @@
       conda
       jupyter
       ags # widgets
+      sox
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
