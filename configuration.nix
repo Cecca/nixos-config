@@ -137,6 +137,7 @@
       jupyter
       ags # widgets
       ffmpeg-normalize
+      ffmpeg
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
