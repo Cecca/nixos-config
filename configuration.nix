@@ -136,7 +136,7 @@
       conda
       jupyter
       ags # widgets
-      sox
+      ffmpeg-normalize
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
