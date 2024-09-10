@@ -138,6 +138,7 @@
       ags # widgets
       ffmpeg-normalize
       ffmpeg
+      hyperfine
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
