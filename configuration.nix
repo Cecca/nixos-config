@@ -139,6 +139,7 @@
       ffmpeg-normalize
       ffmpeg
       hyperfine
+      openssl
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
