@@ -140,6 +140,7 @@
       ffmpeg
       hyperfine
       openssl
+      age
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
