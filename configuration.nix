@@ -128,7 +128,7 @@
       vscode-fhs
       slack
       intel-gpu-tools
-      gerbera # to stream video on UPnP
+      gnome-network-displays
 
       # command line utils
       gh
