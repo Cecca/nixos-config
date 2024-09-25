@@ -128,7 +128,7 @@
       vscode-fhs
       slack
       intel-gpu-tools
-      stellarium
+      gerbera # to stream video on UPnP
 
       # command line utils
       gh
