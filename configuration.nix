@@ -199,6 +199,7 @@
     hdf5
     pkg-config
     poetry
+    uv
 
     alejandra
     libnotify
