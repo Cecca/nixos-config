@@ -200,6 +200,7 @@
     pkg-config
     poetry
     uv
+    rust-script
 
     alejandra
     libnotify
