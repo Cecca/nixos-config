@@ -129,6 +129,7 @@
       slack
       intel-gpu-tools
       gnome-network-displays
+      ardour
 
       # command line utils
       gh
