@@ -133,6 +133,7 @@
 
       # command line utils
       gh
+      git-filter-repo
       dust
       conda
       jupyter
