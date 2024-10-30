@@ -220,6 +220,7 @@
 
     # languages
     typst
+    typst-lsp
     pipx
     cmake
     cmakeCurses
