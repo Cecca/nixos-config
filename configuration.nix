@@ -221,6 +221,7 @@
     # languages
     typst
     typst-lsp
+    tectonic
     pipx
     cmake
     cmakeCurses
