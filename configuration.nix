@@ -222,6 +222,7 @@
     typst
     typst-lsp
     tectonic
+    marksman
     pipx
     cmake
     cmakeCurses
