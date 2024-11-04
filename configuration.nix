@@ -204,6 +204,7 @@
     poetry
     uv
     rust-script
+    usbutils
 
     alejandra
     libnotify
