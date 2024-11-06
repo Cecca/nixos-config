@@ -129,7 +129,6 @@
       slack
       intel-gpu-tools
       gnome-network-displays
-      ardour
       rpi-imager
 
       # command line utils
