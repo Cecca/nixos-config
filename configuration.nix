@@ -134,6 +134,7 @@
       # command line utils
       gh
       git-filter-repo
+      gitu
       dust
       conda
       jupyter
