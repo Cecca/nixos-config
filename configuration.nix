@@ -135,6 +135,7 @@
       gh
       git-filter-repo
       gitu
+      ninja
       dust
       conda
       jupyter
