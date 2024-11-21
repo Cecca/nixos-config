@@ -93,6 +93,7 @@
       dropbox-cli
       # frescobaldi
       lilypond
+      gthumb
       musescore
       spotify
       zoom-us
