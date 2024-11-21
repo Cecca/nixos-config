@@ -95,7 +95,6 @@
       lilypond
       musescore
       spotify
-      zed-editor
       zoom-us
       inkscape
       gnome-tweaks
