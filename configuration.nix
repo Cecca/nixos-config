@@ -116,7 +116,6 @@
       fira-code-nerdfont
       nerdfonts
       timidity
-      calibre
       xdg-desktop-portal
       xdg-desktop-portal-gnome
       github-desktop
