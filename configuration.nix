@@ -85,7 +85,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
     packages = with pkgs; [
       firefox
       darktable
