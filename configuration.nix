@@ -129,7 +129,6 @@
       intel-gpu-tools
       gnome-network-displays
       rpi-imager
-      cairo
 
       # command line utils
       gh
