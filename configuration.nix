@@ -144,6 +144,7 @@
       hyperfine
       openssl
       age
+      zbar # qr code reader
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
