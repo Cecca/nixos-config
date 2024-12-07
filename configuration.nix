@@ -145,6 +145,7 @@
       openssl
       age
       zbar # qr code reader
+      jq
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
