@@ -129,6 +129,7 @@
       intel-gpu-tools
       gnome-network-displays
       rpi-imager
+      popcorntime
 
       # command line utils
       gh
