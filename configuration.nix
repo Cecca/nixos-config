@@ -130,6 +130,7 @@
       gnome-network-displays
       rpi-imager
       popcorntime
+      scantailor-advanced
 
       # command line utils
       gh
