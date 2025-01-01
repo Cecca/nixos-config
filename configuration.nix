@@ -131,6 +131,7 @@
       rpi-imager
       popcorntime
       scantailor-advanced
+      stellarium
 
       # command line utils
       gh
