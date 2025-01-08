@@ -149,6 +149,7 @@
       age
       zbar # qr code reader
       jq
+      yt-dlp
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
