@@ -261,6 +261,9 @@
   };
 
   #fonts.packages = with pkgs; [ nerdfonts ];
+  fonts.packages = [ 
+    pkgs.nerd-fonts.fira-code
+  ];
 
   programs.bash = {
     blesh.enable = false;
