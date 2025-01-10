@@ -114,7 +114,7 @@
       fira-code
       fira-code-symbols
       fira-code-nerdfont
-      nerdfonts
+      #nerdfonts
       timidity
       xdg-desktop-portal
       xdg-desktop-portal-gnome
@@ -122,7 +122,6 @@
       mpv
       google-chrome
       libreoffice
-      xournal
       thonny
       vscode-fhs
       slack
@@ -131,7 +130,6 @@
       rpi-imager
       popcorntime
       scantailor-advanced
-      stellarium
 
       # command line utils
       gh
@@ -141,12 +139,9 @@
       dust
       conda
       jupyter
-      ags # widgets
       ffmpeg-normalize
       ffmpeg
-      hyperfine
       openssl
-      age
       zbar # qr code reader
       jq
       yt-dlp
@@ -200,7 +195,7 @@
     pdftk
     sqlite-interactive
     linuxPackages_latest.perf
-    coz # causal profiling
+    #coz # causal profiling
     fzf
     tree-sitter
     uxplay # for sharing from the ipad
@@ -265,7 +260,7 @@
     };
   };
 
-  fonts.packages = with pkgs; [ nerdfonts ];
+  #fonts.packages = with pkgs; [ nerdfonts ];
 
   programs.bash = {
     blesh.enable = false;
@@ -292,8 +287,6 @@
     enableBashIntegration = true;
     enableFishIntegration = true;
   };
-
-  programs.hyprland.enable = true;
 
   programs.starship.enable = true;
   programs.git.enable = true;
