@@ -230,6 +230,7 @@
     cmake
     cmakeCurses
     clang
+    zig
     deno
     rustup
     rust-analyzer
