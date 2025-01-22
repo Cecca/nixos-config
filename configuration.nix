@@ -145,6 +145,7 @@
       zbar # qr code reader
       jq
       yt-dlp
+      graphviz
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
