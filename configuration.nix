@@ -146,6 +146,7 @@
       jq
       yt-dlp
       graphviz
+      librsvg
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
