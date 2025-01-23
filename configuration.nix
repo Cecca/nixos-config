@@ -147,6 +147,7 @@
       yt-dlp
       graphviz
       librsvg
+      ollama
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
