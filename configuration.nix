@@ -131,6 +131,7 @@
       rpi-imager
       popcorntime
       scantailor-advanced
+      rstudio
 
       # command line utils
       gh
