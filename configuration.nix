@@ -132,6 +132,7 @@
       popcorntime
       scantailor-advanced
       rstudio
+      stellarium
 
       # command line utils
       gh
