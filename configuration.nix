@@ -151,6 +151,7 @@
       graphviz
       librsvg
       ollama
+      nil # language server for nix
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
