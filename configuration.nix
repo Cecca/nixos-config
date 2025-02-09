@@ -152,6 +152,7 @@
       librsvg
       ollama
       nil # language server for nix
+      hledger
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
