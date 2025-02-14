@@ -153,6 +153,7 @@
       ollama
       nil # language server for nix
       hledger
+      jj
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
