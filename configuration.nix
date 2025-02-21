@@ -161,6 +161,9 @@
       gnomeExtensions.appindicator
       gnomeExtensions.paperwm
       # gnomeExtensions.tray-icons-reloaded # Crashes when dropbox is launched
+
+      # Other
+      icu # for mzinga to work
     ];
   };
 
