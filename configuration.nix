@@ -126,6 +126,7 @@
       thonny
       vscode-fhs
       slack
+      discord
       intel-gpu-tools
       gnome-network-displays
       rpi-imager
