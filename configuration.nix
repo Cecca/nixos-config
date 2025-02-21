@@ -134,6 +134,7 @@
       scantailor-advanced
       rstudio
       stellarium
+      xournalpp
 
       # command line utils
       gh
