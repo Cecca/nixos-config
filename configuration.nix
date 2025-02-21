@@ -175,6 +175,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
     "python3.12-youtube-dl-2021.12.17"
+    "dotnet-sdk-6.0.428"
   ];
 
   # List packages installed in system profile. To search, run:
@@ -255,7 +256,7 @@
     texlive.combined.scheme-full
     mold # faster linker
     jdk
-    dotnet-sdk
+    dotnet-sdk_6
     python311
     python311Packages.pip
   ] ++ 
