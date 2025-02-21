@@ -164,6 +164,7 @@
 
       # Other
       icu # for mzinga to work
+      icu.dev
     ];
   };
 
