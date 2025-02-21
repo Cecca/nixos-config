@@ -251,6 +251,7 @@
     texlive.combined.scheme-full
     mold # faster linker
     jdk
+    mono
     python311
     python311Packages.pip
   ] ++ 
