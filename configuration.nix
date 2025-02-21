@@ -134,6 +134,7 @@
       scantailor-advanced
       rstudio
       stellarium
+      nom
 
       # command line utils
       gh
