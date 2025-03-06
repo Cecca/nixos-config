@@ -250,6 +250,7 @@
     zls
     deno
     rustup
+    cargo-cross
     rust-analyzer
     micromamba
     quarto
