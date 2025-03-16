@@ -135,6 +135,7 @@
       rstudio
       stellarium
       xournalpp
+      webtorrent_desktop
 
       # command line utils
       gh
