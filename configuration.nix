@@ -102,7 +102,7 @@
       gnome-tweaks
       tor-browser
       transmission_4-gtk
-      kdenlive
+      kdePackages.kdenlive
       duckdb
       qbittorrent
       zip
@@ -240,7 +240,6 @@
 
     # languages
     typst
-    typst-lsp
     tectonic
     marksman
     pipx
