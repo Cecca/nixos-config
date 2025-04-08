@@ -136,6 +136,7 @@
       stellarium
       xournalpp
       webtorrent_desktop
+      apptainer
 
       # command line utils
       gh
