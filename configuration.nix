@@ -287,6 +287,7 @@
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.nerd-fonts.symbols-only
     pkgs.lato
+    pkgs.xkcd-font
   ];
 
   programs.bash = {
