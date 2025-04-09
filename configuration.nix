@@ -129,6 +129,7 @@
       discord
       intel-gpu-tools
       gnome-network-displays
+      gnome-remote-desktop
       rpi-imager
       popcorntime
       scantailor-advanced
