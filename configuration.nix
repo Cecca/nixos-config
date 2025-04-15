@@ -138,6 +138,7 @@
       xournalpp
       webtorrent_desktop
       apptainer
+      nixos-generators
 
       # command line utils
       gh
