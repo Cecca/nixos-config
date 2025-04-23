@@ -97,7 +97,7 @@
       gthumb
       musescore
       spotify
-      #zoom-us
+      zoom-us
       inkscape
       gnome-tweaks
       tor-browser
