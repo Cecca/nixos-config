@@ -267,7 +267,7 @@
   ] ++ 
   # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
   [(let base = pkgs.appimageTools.defaultFhsEnvArgs; in
-   pkgs.buildFHSUserEnv (base // {
+   pkgs.buildFHSEnv (base // {
      name = "fhs";
      targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config]; 
      profile = "export FHS=1"; 
