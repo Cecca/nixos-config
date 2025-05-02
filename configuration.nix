@@ -208,6 +208,7 @@
     bottom
     bat
     nushell
+    nushellPlugins.query
     starship
     fd
     imagemagick
