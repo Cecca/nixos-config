@@ -139,6 +139,7 @@
       webtorrent_desktop
       apptainer
       nixos-generators
+      gparted
 
       # command line utils
       gh
