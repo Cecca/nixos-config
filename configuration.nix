@@ -158,10 +158,10 @@
       yt-dlp
       graphviz
       librsvg
-      ollama
       nil # language server for nix
       hledger
       jujutsu
+      manim
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
