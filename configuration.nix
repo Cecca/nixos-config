@@ -103,6 +103,7 @@
       tor-browser
       transmission_4-gtk
       kdePackages.kdenlive
+      losslesscut-bin
       mlt
       duckdb
       qbittorrent
