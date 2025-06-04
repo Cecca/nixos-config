@@ -242,7 +242,6 @@
     texlab
     stylua
     lua-language-server
-    ruff-lsp
     pyright
     rust-analyzer
 
@@ -263,7 +262,8 @@
     micromamba
     quarto
     nodejs
-    texlive.combined.scheme-full
+    # texlive.combined.scheme-full
+    texliveFull
     mold # faster linker
     jdk
     dotnet-sdk_6
