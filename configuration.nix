@@ -100,6 +100,7 @@
       # zoom-us
       inkscape
       gnome-tweaks
+      gedit
       tor-browser
       transmission_4-gtk
       kdePackages.kdenlive
