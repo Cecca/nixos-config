@@ -143,6 +143,7 @@
       apptainer
       nixos-generators
       gparted
+      obs-studio
 
       # command line utils
       gh
