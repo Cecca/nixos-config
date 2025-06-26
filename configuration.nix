@@ -1,17 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs,  ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
-  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+  nix.settings.experimental-features = ["flakes" "nix-command"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -60,7 +60,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.hplip ];
+  services.printing.drivers = [pkgs.hplip];
 
   # Enable sound with pipewire.
   # sound.enable = true;
@@ -86,7 +86,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
+    extraGroups = ["networkmanager" "wheel" "docker" "input"];
     packages = with pkgs; [
       firefox
       darktable
@@ -143,6 +143,7 @@
       apptainer
       nixos-generators
       gparted
+      kooha
 
       # command line utils
       gh
@@ -189,96 +190,103 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # System
-    fira-code
-    hplip
-    sshpass
+  environment.systemPackages = with pkgs;
+    [
+      # System
+      fira-code
+      hplip
+      sshpass
 
-    # Tools
-    gnumake
-    gcc12
-    just
-    vim
-    neovim
-    helix
-    wget
-    wezterm
-    kitty
-    obsidian
-    zoxide
-    eza
-    lazygit
-    bottom
-    bat
-    nushell
-    nushellPlugins.query
-    starship
-    fd
-    imagemagick
-    ghostscript
-    pdftk
-    sqlite-interactive
-    linuxPackages_latest.perf
-    #coz # causal profiling
-    fzf
-    tree-sitter
-    uxplay # for sharing from the ipad
-    wl-clipboard
-    backgroundremover
-    hdf5
-    pkg-config
-    poetry
-    uv
-    rust-script
-    usbutils
+      # Tools
+      gnumake
+      gcc12
+      just
+      vim
+      neovim
+      helix
+      wget
+      wezterm
+      kitty
+      obsidian
+      zoxide
+      eza
+      lazygit
+      bottom
+      bat
+      nushell
+      nushellPlugins.query
+      starship
+      fd
+      imagemagick
+      ghostscript
+      pdftk
+      sqlite-interactive
+      linuxPackages_latest.perf
+      #coz # causal profiling
+      fzf
+      tree-sitter
+      uxplay # for sharing from the ipad
+      wl-clipboard
+      backgroundremover
+      hdf5
+      pkg-config
+      poetry
+      uv
+      rust-script
+      usbutils
 
-    alejandra
-    libnotify
-    watchexec
-    ripgrep
-    tldr
-    ruff
-    texlab
-    stylua
-    lua-language-server
-    pyright
-    rust-analyzer
+      alejandra
+      libnotify
+      watchexec
+      ripgrep
+      tldr
+      ruff
+      texlab
+      stylua
+      lua-language-server
+      pyright
+      rust-analyzer
 
-    # languages
-    typst
-    tectonic
-    marksman
-    pipx
-    cmake
-    cmakeCurses
-    clang
-    zig
-    zls
-    deno
-    rustup
-    cargo-cross
-    rust-analyzer
-    micromamba
-    quarto
-    nodejs
-    # texlive.combined.scheme-full
-    texliveFull
-    mold # faster linker
-    jdk
-    dotnet-sdk_6
-    python311
-    python311Packages.pip
-  ] ++ 
-  # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
-  [(let base = pkgs.appimageTools.defaultFhsEnvArgs; in
-   pkgs.buildFHSEnv (base // {
-     name = "fhs";
-     targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config]; 
-     profile = "export FHS=1"; 
-     runScript = "fish"; 
-     extraOutputsToInstall = ["dev"];
-   }))];
+      # languages
+      typst
+      tectonic
+      marksman
+      pipx
+      cmake
+      cmakeCurses
+      clang
+      zig
+      zls
+      deno
+      rustup
+      cargo-cross
+      rust-analyzer
+      micromamba
+      quarto
+      nodejs
+      # texlive.combined.scheme-full
+      texliveFull
+      mold # faster linker
+      jdk
+      dotnet-sdk_6
+      python311
+      python311Packages.pip
+    ]
+    ++
+    # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
+    [
+      (let
+        base = pkgs.appimageTools.defaultFhsEnvArgs;
+      in
+        pkgs.buildFHSEnv (base
+          // {
+            name = "fhs";
+            targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config];
+            profile = "export FHS=1";
+            runScript = "fish";
+            extraOutputsToInstall = ["dev"];
+          }))
+    ];
 
   virtualisation.docker = {
     enable = true;
@@ -289,7 +297,7 @@
   };
 
   #fonts.packages = with pkgs; [ nerdfonts ];
-  fonts.packages = [ 
+  fonts.packages = [
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.nerd-fonts.symbols-only
@@ -332,7 +340,7 @@
   # Backup services
   systemd.user.services.backup = {
     enable = true;
-    wantedBy = [ "default.target" ];
+    wantedBy = ["default.target"];
     description = "Backup the home directory using linux-timemachine";
     unitConfig = {
       ConditionPathIsDirectory = "/var/run/media/matteo/matteo-backup/backup";
@@ -341,12 +349,11 @@
       WorkinDirectory = "%h";
       Type = "oneshot";
       ExecStart = ''/usr/local/bin/timemachine /home/matteo/ /var/run/media/matteo/matteo-backup/backup -- --exclude-from=%h/.config/linux-timemachine/exclude.txt'';
-
     };
   };
   systemd.user.timers.backup = {
     enable = true;
-    wantedBy = [ "timers.target" ];
+    wantedBy = ["timers.target"];
     description = "Run the backup every hour";
     timerConfig = {
       OnBootSec = "15min";
@@ -358,7 +365,7 @@
   # Dropbox service
   systemd.user.services.dropbox = {
     description = "Dropbox";
-    wantedBy = [ "graphical-session.target" ];
+    wantedBy = ["graphical-session.target"];
     environment = {
       QT_PLUGIN_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtPluginPrefix;
       QML2_IMPORT_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtQmlPrefix;
@@ -373,7 +380,6 @@
       Nice = 10;
     };
   };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -390,8 +396,8 @@
 
   # Open ports in the firewall.
   networking.firewall = {
-    allowedTCPPorts = [ 17500 ];
-    allowedUDPPorts = [ 17500 ];
+    allowedTCPPorts = [17500];
+    allowedUDPPorts = [17500];
   };
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -403,5 +409,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
