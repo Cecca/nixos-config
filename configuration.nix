@@ -143,7 +143,6 @@
       apptainer
       nixos-generators
       gparted
-      kooha
 
       # command line utils
       gh
