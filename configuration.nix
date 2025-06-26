@@ -144,6 +144,7 @@
       nixos-generators
       gparted
       obs-studio
+      kazam
 
       # command line utils
       gh
