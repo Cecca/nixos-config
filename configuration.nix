@@ -144,6 +144,7 @@
       nixos-generators
       gparted
       obs-studio
+      bitwarden-cli
 
       # command line utils
       gh
