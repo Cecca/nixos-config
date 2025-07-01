@@ -150,6 +150,7 @@
       gh
       git-filter-repo
       gitu
+      git-lfs
       ninja
       dust
       conda
