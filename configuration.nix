@@ -210,6 +210,7 @@
       wezterm
       kitty
       ghostty
+      viu
       obsidian
       zoxide
       eza
