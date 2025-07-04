@@ -209,6 +209,7 @@
       wget
       wezterm
       kitty
+      ghostty
       obsidian
       zoxide
       eza
