@@ -145,6 +145,7 @@
       gparted
       obs-studio
       bitwarden-cli
+      calibre
 
       # command line utils
       gh
