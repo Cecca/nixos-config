@@ -131,8 +131,8 @@
       slack
       discord
       intel-gpu-tools
-      gnome-network-displays
       gnome-remote-desktop
+      gnome-solanum
       rpi-imager
       popcorntime
       scantailor-advanced
