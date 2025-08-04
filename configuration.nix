@@ -171,6 +171,7 @@
       hledger
       jujutsu
       manim
+      superhtml
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
@@ -279,6 +280,16 @@
       dotnet-sdk_6
       python311
       python311Packages.pip
+
+      # Hyprland stuff
+      networkmanagerapplet
+      xdg-desktop-portal-hyprland
+      pipewire
+      wireplumber
+      swww # Wallpapers
+      wallust # Pick colors from the background
+      anyrun
+      waybar
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
