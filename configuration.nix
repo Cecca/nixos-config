@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  keycounter,
   ...
 }: {
   imports = [
@@ -74,6 +75,8 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
+
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
@@ -89,7 +92,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = ["networkmanager" "wheel" "docker" "input"];
+    extraGroups = ["networkmanager" "wheel" "docker" "input" "audio"];
     packages = with pkgs; [
       firefox
       darktable
@@ -203,6 +206,7 @@
       fira-code
       hplip
       sshpass
+      keycounter.packages."x86_64-linux".default
 
       # Tools
       gnumake
@@ -355,6 +359,18 @@
   programs.fish.enable = true;
   programs.direnv.enable = true;
   programs.steam.enable = true;
+
+  systemd.services.keycounter = {
+    enable = true;
+    wantedBy = ["default.target"];
+    description = "Counts the keypresses";
+    serviceConfig = {
+      WorkinDirectory = "%h";
+      ExecStart = ''
+        /run/current-system/sw/bin/keycounter /var/log/keycounter.csv
+      '';
+    };
+  };
 
   # Backup services
   systemd.user.services.backup = {
