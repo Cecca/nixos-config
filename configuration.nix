@@ -67,7 +67,6 @@
   services.printing.drivers = [pkgs.hplip];
 
   # Enable sound with pipewire.
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -92,7 +91,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = ["networkmanager" "wheel" "docker" "input" "audio"];
+    extraGroups = ["networkmanager" "wheel" "docker" "input" "audio" "libvirtd" "vboxusers"];
     packages = with pkgs; [
       firefox
       darktable
@@ -137,8 +136,6 @@
       slack
       discord
       intel-gpu-tools
-      gnome-remote-desktop
-      gnome-solanum
       rpi-imager
       popcorntime
       scantailor-advanced
@@ -152,6 +149,7 @@
       obs-studio
       bitwarden-cli
       calibre
+      rnote
 
       # command line utils
       gh
@@ -183,8 +181,9 @@
       # gnomeExtensions.tray-icons-reloaded # Crashes when dropbox is launched
 
       # Other
-      icu # for mzinga to work
-      icu.dev
+      xf86_input_wacom
+      libwacom
+      opentabletdriver
     ];
   };
 
@@ -319,12 +318,17 @@
     };
   };
 
+  virtualisation.virtualbox.host = {
+    enable = true;
+  };
+
   #fonts.packages = with pkgs; [ nerdfonts ];
   fonts.packages = [
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.nerd-fonts.symbols-only
     pkgs.lato
+    pkgs.alegreya
     pkgs.xkcd-font
   ];
 
@@ -358,7 +362,7 @@
   programs.git.enable = true;
   programs.fish.enable = true;
   programs.direnv.enable = true;
-  programs.steam.enable = true;
+  programs.steam.enable = false;
 
   systemd.services.keycounter = {
     enable = true;
@@ -369,6 +373,29 @@
       ExecStart = ''
         /run/current-system/sw/bin/keycounter /var/log/keycounter.csv
       '';
+    };
+  };
+
+  systemd.user.services.notes-count = {
+    enable = true;
+    wantedBy = ["default.target"];
+    description = "Count the words in the Obsidian valut";
+    serviceConfig = {
+      WorkingDirectory = "%h/Notes";
+      Type = "oneshot";
+      ExecStart = ''
+        /run/current-system/sw/bin/bash -c 'echo $(date --iso-8601=seconds) $(wc --total=only -w -c **/*.md) | tr " " "," >> notes-wordcount.csv'      '';
+    };
+  };
+  systemd.user.timers.notes-count = {
+    enable = true;
+    wantedBy = ["timers.target"];
+    description = "Count words in the obsidian vault every hour";
+    timerConfig = {
+      OnBootSec = "10min";
+      OnCalendar = "hourly";
+      Persistent = "true";
+      Unit = "notes-count.service";
     };
   };
 
