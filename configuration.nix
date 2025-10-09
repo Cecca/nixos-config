@@ -285,6 +285,7 @@
       python311Packages.pip
 
       # Hyprland stuff
+      hyprlock
       networkmanagerapplet
       xdg-desktop-portal-hyprland
       pipewire
