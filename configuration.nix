@@ -5,13 +5,11 @@
   config,
   pkgs,
   keycounter,
-  walker,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # walker.nixosModules.default
   ];
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
@@ -54,10 +52,6 @@
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-
-  # Enable hyprland
-  programs.hyprland.enable = true;
-  # programs.walker.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -283,17 +277,6 @@
       dotnet-sdk_6
       python311
       python311Packages.pip
-
-      # Hyprland stuff
-      hyprlock
-      networkmanagerapplet
-      xdg-desktop-portal-hyprland
-      pipewire
-      wireplumber
-      swww # Wallpapers
-      wallust # Pick colors from the background
-      anyrun
-      waybar
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
