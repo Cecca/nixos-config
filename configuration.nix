@@ -5,11 +5,13 @@
   config,
   pkgs,
   keycounter,
+  walker,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    # walker.nixosModules.default
   ];
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
@@ -55,6 +57,7 @@
 
   # Enable hyprland
   programs.hyprland.enable = true;
+  # programs.walker.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
