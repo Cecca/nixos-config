@@ -180,7 +180,7 @@
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
       gnomeExtensions.appindicator
-      gnomeExtensions.paperwm
+      gnomeExtensions.tiling-shell
       # gnomeExtensions.tray-icons-reloaded # Crashes when dropbox is launched
 
       # Other
