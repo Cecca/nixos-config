@@ -212,7 +212,6 @@
 
       # Tools
       gnumake
-      gcc12
       just
       vim
       neovim
@@ -276,10 +275,8 @@
       rustup
       cargo-cross
       rust-analyzer
-      micromamba
       quarto
       nodejs
-      # texlive.combined.scheme-full
       texliveFull
       mold # faster linker
       jdk
@@ -322,14 +319,14 @@
     };
   };
 
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableKvm = false;
-    # addNetworkInterface = false;
-  };
-  # without the following, Virtualbox does not work.
-  # see in the future if we can do without it
-  boot.kernelParams = ["kvm.enable_virt_at_load=0"];
+  # virtualisation.virtualbox.host = {
+  #   enable = true;
+  #   enableKvm = false;
+  #   # addNetworkInterface = false;
+  # };
+  # # without the following, Virtualbox does not work.
+  # # see in the future if we can do without it
+  # boot.kernelParams = ["kvm.enable_virt_at_load=0"];
 
   #fonts.packages = with pkgs; [ nerdfonts ];
   fonts.packages = [
