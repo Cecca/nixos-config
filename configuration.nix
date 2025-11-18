@@ -88,7 +88,7 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = ["networkmanager" "wheel" "docker" "input" "audio" "libvirtd" "vboxusers"];
+    extraGroups = ["networkmanager" "wheel" "input" "audio" "libvirtd" "vboxusers"];
     packages = with pkgs; [
       firefox
       darktable
@@ -147,6 +147,7 @@
       bitwarden-cli
       calibre
       rnote
+      # arduino-ide
 
       # command line utils
       gh
@@ -210,6 +211,7 @@
       vim
       neovim
       helix
+      lsp-ai
       wget
       wezterm
       kitty
@@ -240,6 +242,7 @@
       pkg-config
       poetry
       uv
+      go
       rust-script
       usbutils
 
@@ -273,7 +276,7 @@
       nodejs
       texliveFull
       mold # faster linker
-      jdk
+      jdk25
       dotnet-sdk_6
       python311
       python311Packages.pip
@@ -294,13 +297,24 @@
           }))
     ];
 
-  virtualisation.docker = {
-    enable = false;
-    rootless = {
+  virtualisation = {
+    podman = {
       enable = true;
-      setSocketVariable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
     };
   };
+  # virtualisation.docker = {
+  #   enable = false;
+  #   rootless = {
+  #     enable = true;
+  #     setSocketVariable = true;
+  #   };
+  # };
 
   # virtualisation.virtualbox.host = {
   #   enable = true;
@@ -351,7 +365,7 @@
   programs.git.enable = true;
   programs.fish.enable = true;
   programs.direnv.enable = true;
-  programs.steam.enable = false;
+  programs.steam.enable = true;
 
   systemd.services.keycounter = {
     enable = true;
