@@ -88,7 +88,15 @@
   users.users.matteo = {
     isNormalUser = true;
     description = "Matteo";
-    extraGroups = ["networkmanager" "wheel" "input" "audio" "libvirtd" "vboxusers"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "input"
+      "audio"
+      "libvirtd"
+      "vboxusers"
+      "dialout" # For Arduino board
+    ];
     packages = with pkgs; [
       firefox
       darktable
@@ -147,7 +155,7 @@
       bitwarden-cli
       calibre
       rnote
-      # arduino-ide
+      arduino-ide
 
       # command line utils
       gh
