@@ -107,7 +107,7 @@
       gthumb
       musescore
       spotify
-      # zoom-us
+      zoom-us
       inkscape
       gnome-tweaks
       gedit
@@ -251,6 +251,7 @@
       poetry
       uv
       go
+      gopls
       rust-script
       usbutils
 
