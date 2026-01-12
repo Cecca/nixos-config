@@ -123,7 +123,7 @@
       yazi
       hexyl
       jetbrains-mono
-      poppler_utils
+      poppler-utils
       pandoc
       fira-code
       fira-code-symbols
@@ -200,7 +200,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
     "python3.12-youtube-dl-2021.12.17"
-    "dotnet-sdk-6.0.428"
+    # "dotnet-sdk-6.0.428"
   ];
 
   # List packages installed in system profile. To search, run:
@@ -219,12 +219,8 @@
       vim
       neovim
       helix
-      lsp-ai
       wget
-      wezterm
       kitty
-      ghostty
-      viu
       obsidian
       zoxide
       eza
@@ -239,19 +235,15 @@
       ghostscript
       pdftk
       sqlite-interactive
-      linuxPackages_latest.perf
+      perf
       #coz # causal profiling
       fzf
       tree-sitter
-      uxplay # for sharing from the ipad
       wl-clipboard
-      backgroundremover
       hdf5
       pkg-config
-      poetry
       uv
       go
-      gopls
       rust-script
       usbutils
 
@@ -259,34 +251,29 @@
       libnotify
       watchexec
       ripgrep
-      tldr
       ruff
-      texlab
       stylua
       lua-language-server
       pyright
       rust-analyzer
+      tinymist # typst language server
 
       # languages
       typst
-      tectonic
       marksman
-      pipx
       cmake
       cmakeCurses
       clang
       zig
       zls
-      deno
       rustup
       cargo-cross
       rust-analyzer
       quarto
       nodejs
-      texliveFull
+      # texliveFull
       mold # faster linker
       jdk25
-      dotnet-sdk_6
       python311
       python311Packages.pip
     ]
@@ -356,11 +343,6 @@
         exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
       fi
     '';
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
   };
 
   programs.command-not-found.enable = false;
