@@ -103,16 +103,11 @@
       audacity
       dropbox-cli
       # frescobaldi
-      lilypond
-      gthumb
-      musescore
       spotify
       zoom-us
       inkscape
       gnome-tweaks
       gedit
-      tor-browser
-      transmission_4-gtk
       kdePackages.kdenlive
       losslesscut-bin
       mlt
@@ -120,38 +115,26 @@
       qbittorrent
       zip
       unzip
-      yazi
       hexyl
       jetbrains-mono
       poppler-utils
       pandoc
       fira-code
       fira-code-symbols
-      # fira-code-nerdfont
-      #nerdfonts
       timidity
       xdg-desktop-portal
       xdg-desktop-portal-gnome
-      github-desktop
       mpv
       google-chrome
       libreoffice
-      thonny
-      vscode-fhs
       slack
       discord
       intel-gpu-tools
       rpi-imager
-      popcorntime
       scantailor-advanced
-      rstudio
-      stellarium
-      xournalpp
-      webtorrent_desktop
       apptainer
       nixos-generators
       gparted
-      obs-studio
       bitwarden-cli
       calibre
       rnote
@@ -160,25 +143,18 @@
       # command line utils
       gh
       git-filter-repo
-      gitu
       git-lfs
       ninja
       dust
-      conda
-      jupyter
       ffmpeg-normalize
       ffmpeg
       openssl
-      zbar # qr code reader
       jq
-      yt-dlp
       graphviz
       librsvg
       nil # language server for nix
-      hledger
       jujutsu
       manim
-      superhtml
       gemini-cli
 
       # Gnome extentions
