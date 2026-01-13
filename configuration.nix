@@ -179,6 +179,7 @@
       jujutsu
       manim
       superhtml
+      gemini-cli
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
