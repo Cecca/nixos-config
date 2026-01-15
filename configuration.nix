@@ -99,6 +99,7 @@
     ];
     packages = with pkgs; [
       firefox
+      vscode-fhs
       darktable
       audacity
       dropbox-cli
