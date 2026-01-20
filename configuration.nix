@@ -50,8 +50,16 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = false;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "catppuccin-mocha-mauve";
+  };
   services.desktopManager.gnome.enable = true;
+
+  ##########################################################
+  # Hyprland
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -89,7 +97,7 @@
   boot.kernelModules = ["uinput"];
 
   # Enable uinput
-  hardware.uinput.enable = true;
+  hardware.uinput.enable = false;
   # Set up udev rules for uinput
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
@@ -107,7 +115,7 @@
   };
 
   services.kanata = {
-    enable = true;
+    enable = false;
     keyboards = {
       internalKeyboard = {
         devices = [
@@ -290,7 +298,16 @@
       pyright
       rust-analyzer
       tinymist # typst language server
-
+      (
+        catppuccin-sddm.override {
+          flavor = "mocha";
+          accent = "mauve";
+          # font = "Noto Sans";
+          # fontSize = "9";
+          # background = "${./wallpaper.png}";
+          # loginBackground = true;
+        }
+      )
       # languages
       typst
       marksman
