@@ -115,7 +115,7 @@
         ];
         config = ''
           (defsrc
-           caps d f h j k l
+           caps f h j k l
           )
           (defvar
            tap-time 200
@@ -123,15 +123,13 @@
           )
           (defalias
            caps (tap-hold 200 200 esc lctl)
-           jctrl (tap-hold 200 200 j rctl)
            arr (tap-hold $tap-time $hold-time f (layer-toggle arrow))
-           del del  ;; Alias for the true delete key action
           )
           (deflayer base
-           @caps d @arr h @jctrl k l
+           @caps @arr h j k l
           )
           (deflayer arrow
-           _ _ @del left down up right
+           _ _ left down up right
           )
         '';
       };
