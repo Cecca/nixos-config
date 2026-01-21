@@ -326,6 +326,19 @@
       jdk25
       python311
       python311Packages.pip
+
+      # Hyprland things
+      dunst
+      waybar
+      polybar
+      hyprpaper
+      hypridle
+      hyprlock
+      hyprpolkitagent
+      hyprlauncher
+      xdg-desktop-portal-hyprland
+      hyprland-qt-support
+      hyprls
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
