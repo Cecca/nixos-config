@@ -97,7 +97,7 @@
   boot.kernelModules = ["uinput"];
 
   # Enable uinput
-  hardware.uinput.enable = false;
+  hardware.uinput.enable = true;
   # Set up udev rules for uinput
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
@@ -115,7 +115,7 @@
   };
 
   services.kanata = {
-    enable = false;
+    enable = true;
     keyboards = {
       internalKeyboard = {
         devices = [
@@ -134,7 +134,7 @@
            arr (tap-hold $tap-time $hold-time f (layer-toggle arrow))
           )
           (deflayer base
-           @caps @arr h j k l
+           @caps f h j k l
           )
           (deflayer arrow
            _ _ left down up right
@@ -336,7 +336,7 @@
       hyprlock
       hyprpolkitagent
       hyprlauncher
-      xdg-desktop-portal-hyprland
+      # xdg-desktop-portal-hyprland
       hyprland-qt-support
       hyprls
     ]
