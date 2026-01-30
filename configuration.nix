@@ -339,6 +339,7 @@
       # xdg-desktop-portal-hyprland
       hyprland-qt-support
       hyprls
+      hyprpanel
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
