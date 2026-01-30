@@ -101,6 +101,7 @@
   # Set up udev rules for uinput
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+    ACTION=="add", KERNEL=="usb*", RUN+="${config.systemd.package}/bin/systemctl --no-block restart keycounter"
   '';
 
   # Ensure the uinput group exists
