@@ -204,6 +204,7 @@
       calibre
       rnote
       arduino-ide
+      zellij
 
       # command line utils
       gh
