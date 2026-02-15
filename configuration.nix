@@ -411,6 +411,9 @@
     '';
   };
 
+  # Enables the executions of e.g. uv without fhs
+  programs.nix-ld.enable = true;
+
   programs.command-not-found.enable = false;
   programs.nix-index = {
     enable = true;
