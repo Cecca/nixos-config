@@ -81,13 +81,25 @@
     pulse.enable = true;
     wireplumber.enable = true;
 
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    # the following two are for using airplay sinks
+    raopOpenFirewall = true;
+    extraConfig.pipewire = {
+      "10-airplay" = {
+        "context.modules" = [
+          {
+            name = "libpipewire-module-raop-discover";
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+            # increase the buffer size if you get dropouts/glitches
+            # args = {
+            #   "raop.latency.ms" = 500;
+            # };
+          }
+        ];
+      };
+    };
   };
+
+  services.avahi.enable = true;
 
   #######################################################################
   # Keyboard remapper
@@ -323,7 +335,7 @@
       rust-analyzer
       quarto
       nodejs
-      # texliveFull
+      texliveFull
       mold # faster linker
       jdk25
       python311
