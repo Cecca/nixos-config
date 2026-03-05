@@ -234,6 +234,7 @@
       jujutsu
       manim
       gemini-cli
+      rclone
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
