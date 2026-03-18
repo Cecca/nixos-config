@@ -302,6 +302,7 @@
       go
       rust-script
       usbutils
+      podman-compose
 
       alejandra
       libnotify
