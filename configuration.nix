@@ -6,7 +6,17 @@
   pkgs,
   keycounter,
   ...
-}: {
+}: let
+  isolateConfigFile = pkgs.writeText "isolate-config.cf" ''
+    box_root=/var/lib/isolate/boxes
+    lock_root=/run/isolate/locks
+    cg_root=auto:/run/isolate/cgroup
+    first_uid=60000
+    first_gid=60000
+    num_boxes=1000
+    restricted_init=0
+  '';
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -519,6 +529,17 @@
       Nice = 10;
     };
   };
+
+  # security.isolate = {
+  #   enable = true;
+  # };
+  security.wrappers.isolate = {
+    source = "${pkgs.isolate}/bin/isolate";
+    setuid = true;
+    owner = "root";
+    group = "root";
+  };
+  environment.variables.ISOLATE_CONFIG_FILE = "${isolateConfigFile}";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
