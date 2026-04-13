@@ -185,6 +185,7 @@ in {
     ];
     packages = with pkgs; [
       firefox
+      floorp-bin
       vscode-fhs
       darktable
       audacity
