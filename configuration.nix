@@ -349,6 +349,7 @@ in {
       quarto
       nodejs
       texliveFull
+      texlab
       mold # faster linker
       jdk25
       python311
