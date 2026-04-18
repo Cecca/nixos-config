@@ -16,7 +16,7 @@
     num_boxes=1000
     restricted_init=0
   '';
-in {
+in rec {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -532,16 +532,24 @@ in {
     };
   };
 
-  # security.isolate = {
-  #   enable = true;
-  # };
-  security.wrappers.isolate = {
-    source = "${pkgs.isolate}/bin/isolate";
-    setuid = true;
-    owner = "root";
-    group = "root";
+  security.isolate = {
+    enable = true;
   };
-  environment.variables.ISOLATE_CONFIG_FILE = "${isolateConfigFile}";
+
+  security.sudo = {
+    enable = true;
+    extraRules = [
+      {
+        commands = [
+          {
+            command = "/run/current-system/sw/bin/isolate";
+            options = ["NOPASSWD"];
+          }
+        ];
+        groups = ["wheel"];
+      }
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
