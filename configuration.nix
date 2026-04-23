@@ -16,7 +16,22 @@
     num_boxes=1000
     restricted_init=0
   '';
-in rec {
+  isolate' = pkgs.symlinkJoin {
+    name = "isolate-wrapped-${pkgs.isolate.version}";
+
+    paths = [pkgs.isolate];
+
+    nativeBuildInputs = [pkgs.makeBinaryWrapper];
+
+    postBuild = ''
+      wrapProgram $out/bin/isolate \
+        --set ISOLATE_CONFIG_FILE ${isolateConfigFile}
+
+      wrapProgram $out/bin/isolate-cg-keeper \
+        --set ISOLATE_CONFIG_FILE ${isolateConfigFile}
+    '';
+  };
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -279,6 +294,7 @@ in rec {
       hplip
       sshpass
       keycounter.packages."x86_64-linux".default
+      isolate'
 
       # Tools
       gnumake
@@ -532,23 +548,22 @@ in rec {
     };
   };
 
-  security.isolate = {
-    enable = true;
+  security.wrappers.isolate = {
+    source = "${isolate'}/bin/isolate";
+    setuid = true;
+    owner = "root";
+    group = "root";
   };
-
-  security.sudo = {
-    enable = true;
-    extraRules = [
-      {
-        commands = [
-          {
-            command = "/run/current-system/sw/bin/isolate";
-            options = ["NOPASSWD"];
-          }
-        ];
-        groups = ["wheel"];
-      }
-    ];
+  systemd.services.isolate = {
+    description = "Isolate control group hierarchy daemon";
+    wantedBy = ["multi-user.target"];
+    documentation = ["man:isolate(1)"];
+    serviceConfig = {
+      Type = "notify";
+      ExecStart = "${isolate'}/bin/isolate-cg-keeper";
+      Slice = "isolate.slice";
+      Delegate = true;
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
