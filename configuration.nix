@@ -243,6 +243,7 @@ in {
       rnote
       arduino-ide
       zellij
+      charm-freeze
 
       # command line utils
       gh
