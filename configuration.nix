@@ -126,61 +126,61 @@ in {
 
   services.avahi.enable = true;
 
-  #######################################################################
-  # Keyboard remapper
-  # https://dev.to/shanu-kumawat/how-to-set-up-kanata-on-nixos-a-step-by-step-guide-1jkc
+  # #######################################################################
+  # # Keyboard remapper
+  # # https://dev.to/shanu-kumawat/how-to-set-up-kanata-on-nixos-a-step-by-step-guide-1jkc
 
-  # Enable the uinput module
-  boot.kernelModules = ["uinput"];
+  # # Enable the uinput module
+  # boot.kernelModules = ["uinput"];
 
-  # Enable uinput
-  hardware.uinput.enable = true;
-  # Set up udev rules for uinput
-  services.udev.extraRules = ''
-    KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
-    ACTION=="add", KERNEL=="usb*", RUN+="${config.systemd.package}/bin/systemctl --no-block restart keycounter"
-  '';
+  # # Enable uinput
+  # hardware.uinput.enable = true;
+  # # Set up udev rules for uinput
+  # services.udev.extraRules = ''
+  #   KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+  #   ACTION=="add", KERNEL=="usb*", RUN+="${config.systemd.package}/bin/systemctl --no-block restart keycounter"
+  # '';
 
-  # Ensure the uinput group exists
-  users.groups.uinput = {};
+  # # Ensure the uinput group exists
+  # users.groups.uinput = {};
 
-  # Add the Kanata service user to necessary groups
-  systemd.services.kanata-internalKeyboard.serviceConfig = {
-    SupplementaryGroups = [
-      "input"
-      "uinput"
-    ];
-  };
+  # # Add the Kanata service user to necessary groups
+  # systemd.services.kanata-internalKeyboard.serviceConfig = {
+  #   SupplementaryGroups = [
+  #     "input"
+  #     "uinput"
+  #   ];
+  # };
 
-  services.kanata = {
-    enable = true;
-    keyboards = {
-      internalKeyboard = {
-        devices = [
-          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-        ];
-        config = ''
-          (defsrc
-           caps f h j k l
-          )
-          (defvar
-           tap-time 200
-           hold-time 200
-          )
-          (defalias
-           caps (tap-hold 200 200 esc lctl)
-           arr (tap-hold $tap-time $hold-time f (layer-toggle arrow))
-          )
-          (deflayer base
-           @caps f h j k l
-          )
-          (deflayer arrow
-           _ _ left down up right
-          )
-        '';
-      };
-    };
-  };
+  # services.kanata = {
+  #   enable = true;
+  #   keyboards = {
+  #     internalKeyboard = {
+  #       devices = [
+  #         "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+  #       ];
+  #       config = ''
+  #         (defsrc
+  #          caps f h j k l
+  #         )
+  #         (defvar
+  #          tap-time 200
+  #          hold-time 200
+  #         )
+  #         (defalias
+  #          caps (tap-hold 200 200 esc lctl)
+  #          arr (tap-hold $tap-time $hold-time f (layer-toggle arrow))
+  #         )
+  #         (deflayer base
+  #          @caps f h j k l
+  #         )
+  #         (deflayer arrow
+  #          _ _ left down up right
+  #         )
+  #       '';
+  #     };
+  #   };
+  # };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
