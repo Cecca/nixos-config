@@ -262,6 +262,7 @@ in {
       manim
       gemini-cli
       rclone
+      superhtml
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
