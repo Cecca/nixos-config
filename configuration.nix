@@ -370,8 +370,8 @@ in {
       texlab
       mold # faster linker
       jdk25
-      python311
-      python311Packages.pip
+      python313
+      python313Packages.pip
 
       # Hyprland things
       dunst
