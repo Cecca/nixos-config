@@ -356,9 +356,14 @@ in {
       # languages
       typst
       marksman
+      presenterm
+      slidev-cli
       cmake
       cmakeCurses
       clang
+      clang-tools
+      llvmPackages.openmp
+      gcc
       zig
       zls
       rustup
