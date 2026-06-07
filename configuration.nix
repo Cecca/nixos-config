@@ -356,8 +356,6 @@ in {
       # languages
       typst
       marksman
-      presenterm
-      slidev-cli
       cmake
       cmakeCurses
       clang
