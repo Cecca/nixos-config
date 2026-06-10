@@ -8,23 +8,18 @@
       url = "/home/matteo/Work/keycounter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    walker = {
-      url = "github:abenz1267/walker";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     self,
     nixpkgs,
     keycounter,
-    walker,
     ...
   }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
-      specialArgs = {inherit keycounter walker;};
+      specialArgs = {inherit keycounter;};
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
