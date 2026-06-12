@@ -389,6 +389,7 @@ in {
       hyprland-qt-support
       hyprls
       hyprpanel
+      noctalia-shell
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
