@@ -162,6 +162,7 @@ in {
       dropbox-cli
       # frescobaldi
       spotify
+      qbz
       zoom-us
       inkscape
       gnome-tweaks
