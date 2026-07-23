@@ -124,6 +124,16 @@ in {
     };
   };
 
+  # Stop the switch to non-existing headphones
+  services.pipewire.wireplumber.extraConfig."51-disable-jack" = {
+    "monitor.alsa.rules" = [
+      {
+        matches = [{"node.name" = "~alsa_output.*";}];
+        actions.update-props."api.acp.auto-port" = false;
+      }
+    ];
+  };
+
   services.avahi.enable = true;
 
   ########################################################################
