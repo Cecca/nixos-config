@@ -215,7 +215,7 @@ in {
       librsvg
       nil # language server for nix
       jujutsu
-      manim
+      # manim
       gemini-cli
       rclone
       superhtml
