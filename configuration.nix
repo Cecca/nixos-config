@@ -168,7 +168,17 @@ in {
       inkscape
       gnome-tweaks
       gedit
-      kdePackages.kdenlive
+      (pkgs.symlinkJoin {
+        # this should fix the crash on save
+        name = "kdenlive-wrapped";
+        paths = [kdePackages.kdenlive];
+        buildInputs = [pkgs.makeWrapper];
+        postBuild = ''
+          wrapProgram $out/bin/kdenlive \
+            --prefix XDG_DATA_DIRS : "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}" \
+            --prefix XDG_DATA_DIRS : "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
+        '';
+      })
       losslesscut-bin
       mlt
       duckdb
