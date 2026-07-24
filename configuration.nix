@@ -5,6 +5,7 @@
   config,
   pkgs,
   keycounter,
+  noctalia,
   ...
 }: let
   isolateConfigFile = pkgs.writeText "isolate-config.cf" ''
@@ -345,7 +346,7 @@ in {
       hyprland-qt-support
       hyprls
       hyprpanel
-      noctalia-shell
+      noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
