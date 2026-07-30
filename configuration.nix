@@ -352,11 +352,13 @@ in {
       hyprlock
       hyprpolkitagent
       hyprlauncher
+      hyprpicker
       # xdg-desktop-portal-hyprland
       hyprland-qt-support
       hyprls
       hyprpanel
       noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+      gpu-screen-recorder
     ]
     ++
     # https://nixos-and-flakes.thiscute.world/best-practices/run-downloaded-binaries-on-nixos#running-downloaded-binaries-on-nixos
