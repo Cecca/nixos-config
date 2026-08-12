@@ -323,6 +323,7 @@ in {
       # languages
       typst
       marksman
+      glow # markdown TUI preview
       cmake
       cmakeCurses
       clang
