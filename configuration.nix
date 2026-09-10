@@ -156,7 +156,7 @@ in {
     ];
     packages = with pkgs; [
       firefox
-      floorp-bin
+      todoist-cli
       vscode-fhs
       darktable
       audacity
@@ -413,6 +413,8 @@ in {
     pkgs.lato
     pkgs.alegreya
     pkgs.xkcd-font
+    pkgs.excalifont
+    pkgs.fg-virgil
   ];
 
   programs.bash = {
