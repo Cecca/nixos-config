@@ -230,6 +230,7 @@ in {
       gemini-cli
       rclone
       superhtml
+      codegraph
 
       # Gnome extentions
       gnomeExtensions.bing-wallpaper-changer
