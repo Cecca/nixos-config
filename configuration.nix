@@ -227,7 +227,6 @@ in {
       nil # language server for nix
       jujutsu
       # manim
-      gemini-cli
       rclone
       superhtml
       codegraph
@@ -358,7 +357,6 @@ in {
       # xdg-desktop-portal-hyprland
       hyprland-qt-support
       hyprls
-      hyprpanel
       noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       gpu-screen-recorder
     ]
