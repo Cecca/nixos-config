@@ -53,6 +53,38 @@ in {
 
   # Enable networking
   networking.networkmanager.enable = true;
+  # networking.networkmanager.ensureProfiles.profiles = {
+  #   eduroam = {
+  #     connection = {
+  #       id = "eduroam";
+  #       type = "wifi";
+  #       interface-name = "wlp0s20f3"; ## replace with your interface-name as displayed by "ip a"
+  #     };
+  #     wifi = {
+  #       mode = "infrastructure";
+  #       ssid = "eduroam";
+  #     };
+  #     wifi-security = {
+  #       key-mgmt = "wpa-eap"; ## adapt according to your universities setup
+  #       pmf = "1";
+  #     };
+  #     "802-1x" = {
+  #       ## not all or even some additional values may be needed here according to your institution
+  #       eap = "peap"; ## adapt according to your universities setup
+  #       identity = "matteo.ceccarello@unipd.it";
+  #       client-cert = "/etc/ssl/certs/eduroam/cert.pem";
+  #       # private-key = "/etc/wpa_supplicant/private.key";
+  #       # private-key-password = "p@ssw0rd-of-your-.key-file"; ## warning, this should only be done for testing purposes, as it makes the password world-readable. You should replace this with some form of secrets-management using sops-nix or agenix.
+  #       ca-cert = "/home/matteo/.config/cat_installer/ca.pem";
+  #     };
+  #     ipv4 = {
+  #       method = "auto";
+  #     };
+  #     ipv6 = {
+  #       method = "auto";
+  #     };
+  #   };
+  # };
 
   # Set your time zone.
   time.timeZone = "Europe/Rome";
@@ -341,8 +373,8 @@ in {
       texlab
       mold # faster linker
       jdk25
-      python313
-      python313Packages.pip
+      (python313.withPackages (ps: with ps; [pip dbus-python]))
+      # python313Packages.pip
 
       # Hyprland things
       dunst
