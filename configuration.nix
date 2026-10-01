@@ -331,6 +331,7 @@ in {
       rust-script
       usbutils
       podman-compose
+      yazi
 
       elan # lean manager
       alejandra
