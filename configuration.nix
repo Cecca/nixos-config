@@ -332,6 +332,7 @@ in {
       usbutils
       podman-compose
 
+      elan # lean manager
       alejandra
       libnotify
       watchexec
