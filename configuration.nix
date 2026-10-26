@@ -443,6 +443,7 @@ in {
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.nerd-fonts.symbols-only
     pkgs.lato
+    pkgs.fira
     pkgs.alegreya
     pkgs.xkcd-font
     pkgs.excalifont
