@@ -189,6 +189,7 @@ in {
     ];
     packages = with pkgs; [
       firefox
+      tor-browser
       todoist-cli
       vscode-fhs
       darktable
@@ -248,6 +249,7 @@ in {
       # command line utils
       gh
       git-filter-repo
+      delta
       git-lfs
       ninja
       dust
@@ -372,6 +374,7 @@ in {
       rust-analyzer
       quarto
       nodejs
+      bun
       texliveFull
       texlab
       mold # faster linker
