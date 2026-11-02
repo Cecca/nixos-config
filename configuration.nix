@@ -308,6 +308,7 @@ in {
       helix
       wget
       kitty
+      ghostty
       obsidian
       zoxide
       eza
